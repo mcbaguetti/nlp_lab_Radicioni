@@ -1,0 +1,9 @@
+# The file containing environment variables 
+.env
+
+# IDE specific files
+.vscode/
+
+# Others
+requirements.txt
+*.pdf
