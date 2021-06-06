@@ -51,3 +51,5 @@ print(max(len(hyp_path) for hyp_path in wn.synset('dog.n.1').hypernym_paths()))
 max(max(len(path) for path in ss.hypernym_paths()) for ss in wn.all_synsets())
 
 # %%
+print(0/45)
+# %%
