@@ -4,6 +4,9 @@
 # IDE specific files
 .vscode/
 
+# Data files
+*.csv
+
 # Others
 requirements.txt
 *.pdf

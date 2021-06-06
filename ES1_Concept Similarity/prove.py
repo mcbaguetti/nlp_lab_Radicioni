@@ -41,4 +41,13 @@ matrix = np.array([[1,2,3],[4,5,6],[7,8,9]])
 print(matrix)
 matrix = np.append(matrix,[11,12, 13], 0)
 print(matrix)
+
+
+# %%
+print(wn.synset('dog.n.1').hypernym_paths())
+print(max(len(hyp_path) for hyp_path in wn.synset('dog.n.1').hypernym_paths()))
+
+# %%
+max(max(len(path) for path in ss.hypernym_paths()) for ss in wn.all_synsets())
+
 # %%
