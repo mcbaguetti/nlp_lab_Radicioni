@@ -1,5 +1,6 @@
 # %%
 import nltk
+import numpy as np
 from nltk.corpus import wordnet as wn
 
 # %%
@@ -35,4 +36,9 @@ for ss in wn.synsets("tiger"):
     for hyper in ss.hypernyms(): 
         print(f'hyper: {str(hyper)}')
     print("############\n")
+# %%
+matrix = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(matrix)
+matrix = np.append(matrix,[11,12, 13], 0)
+print(matrix)
 # %%
