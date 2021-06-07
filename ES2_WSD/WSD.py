@@ -2,17 +2,13 @@
 import nltk
 from nltk.corpus import semcor
 import random
+import re
 
 # %%
 def sc2ss(sensekey):
     """
     Look up a synset given the information from SemCor
     """
-    # TODO
-    # if wnsn != 0:
-    #     return wn.lemma_from_key(sensekey).synset()
-    # else:
-    #     pass 
     return wn.lemma_from_key(sensekey).synset()
 
 
@@ -33,50 +29,69 @@ def print_info(ss):
         print(f'hyper: {str(hyper)}')
     print("############\n")
 
+def get_random_set():
+    random_set = set()
+    while len(random_set) != 50:
+    # random numbers from 0 to len(semcor.chunk_sents())
+        random_set.add(random.randint(0, 37176)) 
+    return random_set
+
 # %%
-def get_words(sentence):
-    words = []
-    for word in sentence:
-        #print(word.tag, word.attrib["cmd"])
-        if word.tag == "wf" and word.attrib["cmd"] == "done":
-            if ("ot" not in word.attrib.keys()):
-                lemma = word.attrib["lemma"]
-                words.append(lemma)
-                print('\033[1m' + lemma + '\033[0m')
-                lexsn = word.attrib["lexsn"]
-                ss = sc2ss(lemma + '%' + lexsn)
-                print_info(ss)
-                print()
+def get_context(sentence):
+    words = set()
+    # for word in sentence:
+    #     #print(word.tag, word.attrib["cmd"])
+    #     if word.tag == "wf" and word.attrib["cmd"] == "done":
+    #         if ("ot" not in word.attrib.keys()):
+    #             lemma = word.attrib["lemma"]
+    #             words.add(lemma)
+    #             print('\033[1m' + lemma + '\033[0m')
+    #             lexsn = word.attrib["lexsn"]
+    #             wnsn = word.attrib["wnsn"]
+    #             if wnsn != "0":
+    #                 ss = sc2ss(lemma + '%' + lexsn)
+    #                 print_info(ss)
+    #             print()
+    sentence = re.sub(r'[^\w\s]', '', sentence)
+    words = set(sentence.split())
     return words
+
+
+# %%
+def get_signature(sense):
+    gloss = sense.definition()
+    gloss = re.sub(r'[^\w\s]', '', gloss)
+    gloss_set = set(gloss.split())
+
+    examples = sense.examples()
+    examples_set = set()
+    for ex in examples:
+        ex = re.sub(r'[^\w\s]', '', ex)
+        examples_set.update(ex.split())
+    
+    return gloss_set.union(examples_set)
+
+# %%
+def compute_overlap(signature, context):
+    return len(signature.intersection(context))
 
 # %%
 def Lesk(word, sentence):
-    best_sense = "a" # TODO
+    best_sense = None # CHECK
     max_overlap = 0
-    context = get_words(sentence)
+    context = get_context(sentence)
     for ss in wn.synsets(word):
-        signature = [] # TODO
+        signature = get_signature(ss)
         overlap = compute_overlap(signature, context)
         if overlap > max_overlap:
             max_overlap = overlap
             best_sense = ss
     return best_sense
 
-# %%
-semcor.words()
 
 # %%
-semcor.chunks()
-# %%
-semcor.sents()
-# %%
-c_sents = semcor.chunk_sents()
-c_sents[9]
-
-# %%
-random_list = []
-for i in range(0, 50):
-  # random numbers from 0 to len(semcor.chunk_sents())
-    random_list.append(random.randint(0, 37176)) 
-random_list
+word = "bank"
+sentence = "the bank can guarantee deposits will eventually cover future tuition costs because it invests in adjustable-rate mortgage securities."
+ss = Lesk(word, sentence)
+ss
 # %%

@@ -1,9 +1,10 @@
 # %%
 import nltk
 import numpy as np
+import re
 from nltk.corpus import wordnet as wn
 # %%
-for ss in wn.synsets("proportionate"):
+for ss in wn.synsets("bank"):
     print(ss.name(), ss.lemma_names())
     print(f'def: {ss.definition()}')
     print(f'examples: {ss.examples()}')
@@ -60,11 +61,26 @@ for word in sent:
     print()
 
 # %%
-a = []
-a.append(1)
-a.append(2)
-a
+ss=wn.synset("bank.n.01")
+a = set()
+a.update([1,2])
+a.update([3,4,8])
+b = set([4,8])
+c = a.intersection(b)
+len(c)
 # %% [markdown]
 http://moin.delph-in.net/wiki/SemCor
+github.com/Akirato/Lesk-Algorithm/blob/master/leskAlgorithm.py
 https://www.nltk.org/api/nltk.corpus.reader.html#nltk.corpus.reader.semcor.SemcorCorpusReader
 https://www.nltk.org/howto/corpus.html
+
+# %%
+semcor.words()
+
+# %%
+semcor.chunks()
+# %%
+semcor.sents()
+# %%
+c_sents = semcor.chunk_sents()
+c_sents[9]
