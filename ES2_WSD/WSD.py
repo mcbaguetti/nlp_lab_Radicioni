@@ -16,7 +16,7 @@ def sc2ss(sensekey):
     """
     try:
         return wn.lemma_from_key(sensekey).synset()
-    except: # No synset found for key
+    except: # No synset found for key (es: 'previous%5:00:00:preceding(a):00')
         return None
 
 def get_random_sentence():
