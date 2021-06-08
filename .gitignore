@@ -7,6 +7,10 @@
 # Data files
 *.csv
 
+# Images
+*.jpg
+*.png
+
 # Others
 requirements.txt
 prove.*
