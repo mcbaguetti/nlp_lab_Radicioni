@@ -4,13 +4,6 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 import nltk
 
 
-# 0 reduce docs by 10, 20, 30 %
-# 1 find topic like a nasari vectors (use title or first paragraph), use wsd
-# 2 create context, group vectors of step 1
-# 3 use weightened overlap and other methods for saving and reranking paragraphs
-# 4 eval with blue and rouge
-
-
 # create a dictionary with pairs word: nasari vector
 def create_nasari():
     nasari = {}
@@ -158,7 +151,7 @@ def calc_sim(topic_vect, paragraph_vector):
 
 
 # process the txt for each row, find the similarity between topic and paragraph
-def process_doc(file_path, topic_vect, nasari_dict, max_lines):
+def process_doc(file_path, topic_vect, nasari_dict):
     paragraph_val = {}  # row number is the key, the score of WO is the value
 
     with open(file_path, encoding="utf8") as file:
@@ -166,9 +159,6 @@ def process_doc(file_path, topic_vect, nasari_dict, max_lines):
             # skip the title
             if i == 0:
                 continue
-            # check if we scanned all the reduced doc
-            if i > max_lines:
-                return paragraph_val
 
             paragraph_vector = []
             final_row = clean_row(row)
@@ -189,9 +179,30 @@ def calc_rows_to_read(file_path, percentage):
         return int(len(file.readlines()) * percentage)
 
 
+# sort a dict
+def sort(dictionary):
+    new_dict = {}
+    for word in sorted(dictionary, key=dictionary.get, reverse=True):
+        new_dict.update({word: dictionary[word]})
+
+    return new_dict
+
+
+# create and save summary
+def create_summary(file_path, saved_paragraph, percentage):
+    new_file_path = "out/summary_" + str(percentage) + "_" + file_path.split("docs/")[1]
+    print(new_file_path)
+    with open(file_path, encoding="utf8") as file:
+        with open(new_file_path, encoding="utf-8", mode='w') as new_file:
+            for i, row in enumerate(file):
+                if i in saved_paragraph:
+                    new_file.write(row)
+
+
 # start the summarization process
 def start(file_path, percentage, topic_method):
     topic_vect = []
+    saved_paragraph = []
 
     nasari_dict = create_nasari()
     lines = calc_rows_to_read(file_path, percentage)
@@ -201,8 +212,17 @@ def start(file_path, percentage, topic_method):
     elif topic_method == "cue":
         topic_vect = find_cue_topic(file_path, nasari_dict)
 
-    paragraph_dict = process_doc(file_path, topic_vect, nasari_dict, lines)
-    print(paragraph_dict)
+    paragraph_dict = process_doc(file_path, topic_vect, nasari_dict)
+    sorted_dict = sort(paragraph_dict)
+
+    for i, paragraph in enumerate(sorted_dict):
+        if i < lines:
+            saved_paragraph.append(paragraph)
+
+    create_summary(file_path, saved_paragraph, percentage)
+
+    # eval with bleu and rouge
+    return
 
 
 start("docs/Andy-Warhol.txt", 0.9, "title")
