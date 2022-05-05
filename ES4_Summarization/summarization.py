@@ -189,14 +189,71 @@ def sort(dictionary):
 
 
 # create and save summary
-def create_summary(file_path, saved_paragraph, percentage):
-    new_file_path = "out/summary_" + str(percentage) + "_" + file_path.split("docs/")[1]
+def create_summary(file_path, saved_paragraph, percentage, method):
+    new_file_path = "out/summary_" + str(percentage) + "_" + method + "_" + file_path.split("docs/")[1]
     print(new_file_path)
     with open(file_path, encoding="utf8") as file:
         with open(new_file_path, encoding="utf-8", mode='w') as new_file:
             for i, row in enumerate(file):
                 if i in saved_paragraph:
                     new_file.write(row)
+
+    return new_file_path
+
+
+# create a dict with the most frequent words divided by the length of the total words in the text
+def most_frequent_words(file_path):
+
+    freq_dict = {}
+    count = 0
+
+    with open(file_path, encoding="utf8") as file:
+        for i, row in enumerate(file):
+            final_row = clean_row(row)
+
+            for word in final_row:
+                freq_dict[word.lower()] = 1 + freq_dict.get(word.lower(), 0)
+                count += 1
+
+    for elem in freq_dict:
+        freq_dict[elem] = float(freq_dict[elem] / count)
+
+    return freq_dict
+
+
+# retrieve the words in summary
+def get_words(summary_path):
+
+    words = []
+
+    with open(summary_path, encoding="utf8") as file:
+        for i, row in enumerate(file):
+            final_row = clean_row(row)
+
+            for word in final_row:
+                words.append(word)
+
+    return words
+
+
+# evaluate the summary with two metrics: bleu and rouge
+def evalutation(freq_dict, summary_words, percentage):
+
+    word_to_eval = int(len(freq_dict) * percentage)
+    summ_words = int(len(summary_words) * percentage)
+    count = 0
+
+    for i, elem in enumerate(freq_dict):
+        if elem in summary_words:
+            count += 1
+
+        if i > word_to_eval:
+            break
+
+    bleu = count / summ_words
+    rouge = count / word_to_eval
+
+    return bleu, rouge
 
 
 # start the summarization process
@@ -219,10 +276,18 @@ def start(file_path, percentage, topic_method):
         if i < lines:
             saved_paragraph.append(paragraph)
 
-    create_summary(file_path, saved_paragraph, percentage)
+    summary_path = create_summary(file_path, saved_paragraph, percentage, topic_method)
 
-    # eval with bleu and rouge
+    freq_dict = most_frequent_words(file_path)
+    sorted_freq = sort(freq_dict)
+    summary_words = get_words(summary_path)
+
+    bleu, rouge = evalutation(sorted_freq, summary_words, percentage)
+
+    print("Bleu Precision: " + str(bleu))
+    print("Rouge Recall: " + str(rouge))
+
     return
 
 
-start("docs/Andy-Warhol.txt", 0.9, "title")
+start("docs/Andy-Warhol.txt", 0.7, "cue")
