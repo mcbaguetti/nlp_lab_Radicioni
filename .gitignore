@@ -15,3 +15,6 @@
 requirements.txt
 prove.*
 *.pdf
+.idea/workspace.xml
+*.xml
+.idea/tln-radicioni.iml
