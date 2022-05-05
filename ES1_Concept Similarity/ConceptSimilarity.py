@@ -105,7 +105,7 @@ def get_indices():
         indices[2,col] = corr
 
 # %%
-data = load_data('WordSim353.csv')
+data = load_data('ES1_Concept Similarity/WordSim353.csv')
 scores = np.empty([354,3], object)
 scores[0] = ["WUP", "PTH", "LCH"]
 data = np.append(data, scores, axis=1)
