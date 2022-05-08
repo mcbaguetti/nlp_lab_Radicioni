@@ -58,3 +58,10 @@ matrix[0,1:] = ["a", "b", "c"]
 
 print(matrix)
 # %%
+word1 = "cat"
+word2 = "dog"
+
+test_shortest_path_distance(word1,word2)
+
+ancestor_s1 = set(s1[0].hypernyms())
+ancestor_s2 = set(s2[0].hypernyms())
