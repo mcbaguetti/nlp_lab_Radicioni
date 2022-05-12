@@ -290,4 +290,4 @@ def start(file_path, percentage, topic_method):
     return
 
 
-start("docs/Andy-Warhol.txt", 0.7, "cue")
+start("docs/Andy-Warhol.txt", 0.9, "cue")
