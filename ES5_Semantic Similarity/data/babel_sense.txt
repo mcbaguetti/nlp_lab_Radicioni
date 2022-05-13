@@ -1,0 +1,50 @@
+condizione macroeconomica,fattori produttivi,crescita economica	pil, P.I.L.,prodotto interno lordo
+Gaio Giulio Cesare,Caio Giulio Cesare,imperatore	Gaio Giulio Cesare,Caio Giulio Cesare,imperatore
+ammalato,assistito,cliente	fase,periodo,sessione
+behaviourismo,psicologia,comportamento	guarigione,malattie,metodi
+Gaio Giulio Cesare,Caio Giulio Cesare,imperatore	organizzazione,formazione,organizzativo
+persona,ricerche,sperimentazioni	rivista ,Teatro di rivista,spettacolo
+casualita,azzardo,grandezza	Conoscenza,studio,dati
+giulebbe,bevanda,estratto di rosa	petali,rosa,estratto
+frutti,piante,Rutaceae	Agrume,buccia gialla,amarognolo
+regina,Regno Unito,Imperatrice	Gran Bretagna,Regno Unito,Irlanda del Nord
+olimpiade,Olimpiadi ,Manifestazione	fantasma,spettro,apparizione
+responsabile,chiese,cattolicesimo	mussulmano,islamico,maomettano
+essere umano,Homo,umano	convenuto,accusato ,imputato
+meteorite,Oggetto,spazio	mondo ,globo,terrestre
+segno,significato convenzionale,elemento	segno,significato convenzionale,elemento
+Scienza,uomo,entita biologica	Nuova York ,stato di New York,citta
+crepuscolo,notte,illuminazione	tavola,mobilio,piano
+Insediamento umano,villaggio,borgo	citta,cittadina ,paese
+cappotto,casacca,giacchetta	minerale,bottiglia,acqua sorgiva
+fenomeni,forze,cose	pianta,Plantae,vegetale
+sottoprogramma,procedura,procedimento	Programma,linguaggio,istruzioni
+citta,Iran,Ecbatana	Citta Eterna,Comune di Roma,impero romano
+parapioggia,paracqua,ombrellone	fornello,fuoco,apparecchio
+dignita,decoro,onore	valutazione,estimazione,perizia
+bandiera,segnalazioni,identificazione	decoro,onore,reputazione
+display,monitor,video	Monitor,schermo ,dispositivo
+cloche,barra,comando	radiolocalizzatore,posizione,rilevamento
+riso,grano,fragranza	riso,chicco lungo,fiori
+riconoscimento,Attestazione,distinzione	sneaker,takkies,attivita sportive
+diritto,giurisprudenza,legislazione	vasca,piscina coperta,nuotare
+fonte,polla,scaturigine	cassetta,astuccio,cassa
+Edificio,opere,spettacolo	tamburo,Membranofoni,membranofono
+pianta,Plantae,vegetale	browser,navigatore,informatica
+Indumento,cotone,maniche	golf,maglione,bottoni
+poesia,versi,narrativo	tempo,pause,intervalli
+aedo,divinatore,vate	pastore,curato,Parroco
+Premio Oscar,Academy Award, cinema	arena,campo sportivo,palazzetto dello sport
+tavola reale,sbaraglino,tric-trac	gioco da tavolo,giocatori ,Cina
+Insetto ,grandi ali ,Lepidotteri	rosaio,Fiore,pianta
+recinzione,barriera,cinta	movimento,salto,abilita
+nihilismo,Dottrina filosofica ,societa	spettacolo ,pellicola,opera cinematografica
+planetoide,corpo celeste,pianeta terrestre	stella,sole,Corpo celeste
+ribellione,rivolta,insurrezione	figura,illustrazione ,riproduzione
+biancheria intima,lingerie,indumento	organismo,tessuti,tessuti
+aereo militare,mezzo militare,spazioplano	aeromobile,velivolo,aeroplano
+apparizione,personaggio famoso,spettacolo	performance,esecuzione,esibizione
+terra,globo,globo terrestre	regione,supercontinente,continente
+arancio ,albero,Rutaceae	Citrus,frutto,pianta
+ghiaccio,regioni montane,neve	clima,atmosfera,mutamento
+tunnel,Passaggio,cunicolo	strada,via,Striscia di terreno

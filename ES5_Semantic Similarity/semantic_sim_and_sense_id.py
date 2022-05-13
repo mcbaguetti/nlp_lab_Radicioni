@@ -7,6 +7,7 @@ from sklearn.metrics import cohen_kappa_score
 
 def create_nasari():
     nasari = {}
+    word_sense = {}  # dictionary with babelnet id and associated sense
     nasari_path = "data/mini_NASARI.tsv"
 
     with open(nasari_path, encoding="utf8") as file:
@@ -18,40 +19,49 @@ def create_nasari():
             for i, elem in enumerate(row):
                 if i == 0:
                     word = elem.split("__")[0]
-
+                    sense = elem.split("__")[1]
                     if len(word.split("_(")) > 1:
                         word = word.split("_")[0]
 
                     if len(word.split("_")) > 1:
                         word = word.split("_")[0] + " " + word.split("_")[1]
 
+                    word_sense[word] = sense
+
                 else:
                     vector.append(elem)
 
                 nasari[word] = vector
 
-    return nasari
+    return nasari, word_sense
 
 
 def get_human_eval(file_path):
+
+    new_file_path = "out/avg_eval.tsv"
+
     means = []
     first_col = []
     second_col = []
 
     with open(file_path, encoding="utf8") as file:
-        tsv = csv.reader(file, delimiter="\t")
-        for line in tsv:
+        with open(new_file_path, encoding="utf-8", mode='w') as new_file:
+            writ = csv.writer(new_file, delimiter="\t")
+            tsv = csv.reader(file, delimiter="\t")
+            for line in tsv:
+                first_col.append(float(line[2]))
+                second_col.append(float(line[3]))
+                avg = (float(line[2]) + float(line[3])) / 2
+                means.append(avg)
+                line.append(str(avg))
+                writ.writerow(line)
 
-            first_col.append(float(line[2]))
-            second_col.append(float(line[3]))
-            avg = (float(line[2]) + float(line[3])) / 2
-            means.append(avg)
+            first = np.array(first_col, dtype=np.float32)
+            second = np.array(second_col, dtype=np.float32)
 
-        first = np.array(first_col, dtype=np.float32)
-        second = np.array(second_col, dtype=np.float32)
-        return means, pearsonr(first, second), \
-               spearmanr(first, second), \
-               cohen_kappa_score(first.astype(int), second.astype(int))
+    return means, pearsonr(first, second), \
+            spearmanr(first, second), \
+            cohen_kappa_score(first.astype(int), second.astype(int))
 
 
 def create_babel(word):
@@ -100,8 +110,9 @@ def cosine_sim(v1, v2):
 
 def get_similarity(words, babel_words, nasari):
     similarity = []
+    synsets = [[] for _ in range(51)]  # at max we have 50 pairs of synsets
 
-    for group in words:
+    for i, group in enumerate(words):
         sim_score = 0
         if group[0] in babel_words and group[1] in babel_words:
             b1 = babel_words[group[0]]
@@ -109,22 +120,39 @@ def get_similarity(words, babel_words, nasari):
             for syn1 in b1:
                 for syn2 in b2:
                     if syn1 in nasari and syn2 in nasari:
-                        sim_score = max(cosine_sim(nasari[syn1], nasari[syn2]), sim_score)
+                        cos = cosine_sim(nasari[syn1], nasari[syn2])
+                        if sim_score < cos:
+                            sim_score = cos
+                            synsets[i] = (syn1, syn2)
 
         similarity.append(sim_score)
 
-    return similarity
+    return similarity, synsets
+
+
+def identify_terms(synsets, word_sense):
+    file_path = "./data/babel_sense.txt"
+    new_file_path = "out/sense_identification.tsv"
+
+    with open(file_path, encoding="utf8") as file:
+        with open(new_file_path, encoding="utf-8", mode='w') as new_file:
+            for syn, w, row in zip(synsets, word_sense, file):
+                if syn and w:
+                    s = syn[0] + "\t" + syn[1] + "\t" + w[0] + "\t" + w[1] + "\t" + row
+                    new_file.write(s)
+
+    return
 
 
 def start():
     file_path = "../ES5_Semantic Similarity/data/it.test.data.tsv"
 
-    nasari_dict = create_nasari()
-
+    nasari_dict, word_sense = create_nasari()
     human_eval, pears, spear, cohen = get_human_eval(file_path)
     words_ita, babel_words = get_babel_words(file_path)
-    similarity = get_similarity(words_ita, babel_words, nasari_dict)
+    similarity, synsets = get_similarity(words_ita, babel_words, nasari_dict)
 
+    print("Consegna 1: Semantic Similarity")
     print("Avg human evaluation: ")
     print(human_eval)
 
@@ -143,7 +171,9 @@ def start():
     print(spearmanr(human_eval, similarity))
 
     print("\n")
+    print("Consegna 2: Sense Identification")
     print("K Cohen Agreement: " + str(cohen))
+    identify_terms(synsets, words_ita)
 
 
 start()
