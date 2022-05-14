@@ -5,6 +5,7 @@ from scipy.stats import pearsonr, spearmanr
 from sklearn.metrics import cohen_kappa_score
 
 
+# create nasari dictionary with babelnet id and their vectors
 def create_nasari():
     nasari = {}
     word_sense = {}  # dictionary with babelnet id and associated sense
@@ -36,6 +37,7 @@ def create_nasari():
     return nasari, word_sense
 
 
+# find the avg human evaluation of the pairs, write them down and calc inter rate agreement
 def get_human_eval(file_path):
 
     new_file_path = "out/avg_eval.tsv"
@@ -64,6 +66,7 @@ def get_human_eval(file_path):
             cohen_kappa_score(first.astype(int), second.astype(int))
 
 
+# given a word it returns its babelnet ids
 def create_babel(word):
     words_syn_path = "../ES5_Semantic Similarity/data/SemEval17_IT_senses2synsets.txt"
     babel_syns_found = False
@@ -82,13 +85,13 @@ def create_babel(word):
 
                 elif babel_syns_found:
                     vectors.append(l)
-
     return vectors
 
 
+# for each word in the annotated file it creates a dict and a list
 def get_babel_words(file_path):
-    words_ita = []
-    words_babel = {}
+    words_ita = []  # list with italian word pairs
+    words_babel = {}  # dict with italian word : [babelnet-id-1, babelnet-id-2, etc]
 
     with open(file_path, encoding="utf8") as file:
         tsv = csv.reader(file, delimiter="\t")
@@ -101,6 +104,7 @@ def get_babel_words(file_path):
     return words_ita, words_babel
 
 
+# calculates cosine similarity
 def cosine_sim(v1, v2):
     n_v1 = np.array(v1, dtype=float)
     n_v2 = np.array(v2, dtype=float)
@@ -108,6 +112,7 @@ def cosine_sim(v1, v2):
     return np.dot(n_v1, n_v2) / (norm(n_v1) * norm(n_v2))
 
 
+# calculates the max similarity and find the senses that max the similarity
 def get_similarity(words, babel_words, nasari):
     similarity = []
     synsets = [[] for _ in range(51)]  # at max we have 50 pairs of synsets
@@ -130,6 +135,7 @@ def get_similarity(words, babel_words, nasari):
     return similarity, synsets
 
 
+# for each babelnet id found, the function associates the correlated terms (taken from babelnet by hand)
 def identify_terms(synsets, word_sense):
     file_path = "./data/babel_sense.txt"
     new_file_path = "out/sense_identification.tsv"
@@ -144,8 +150,41 @@ def identify_terms(synsets, word_sense):
     return
 
 
+# get babelnet_ids annotated by hand
+def get_babelnet_annotated(path):
+    b_ids = []
+
+    with open(path, encoding="utf8") as file:
+        for row in file:
+            b_id2 = row.split("\t")[1]
+            b_ids.append((row.split("\t")[0], b_id2.split("\n")[0]))
+
+    return b_ids
+
+
+# find accuracy between pair and single human chosen bnet-ids and computer chosen bnet-ids
+def find_accuracy(computer_syns, human_syns):
+
+    single = 0
+    pairs = 0
+    tot_single = len(human_syns) * 2
+    tot_pair = len(human_syns)
+
+    for c, h in zip(computer_syns, human_syns):
+        if c == h:
+            pairs += 1
+
+        for id1, id2 in zip(c, h):
+            if id1 == id2:
+                single += 1
+
+    return single/tot_single, pairs/tot_pair
+
+
+# function that handles semantic similarity and sense identification
 def start():
     file_path = "../ES5_Semantic Similarity/data/it.test.data.tsv"
+    annot_syns_path = "./data/annotated_syns.txt"
 
     nasari_dict, word_sense = create_nasari()
     human_eval, pears, spear, cohen = get_human_eval(file_path)
@@ -173,7 +212,11 @@ def start():
     print("\n")
     print("Consegna 2: Sense Identification")
     print("K Cohen Agreement: " + str(cohen))
-    identify_terms(synsets, words_ita)
+    annotated_syns = get_babelnet_annotated(annot_syns_path)
+    identify_terms(annotated_syns, words_ita)
+    single_acc, pair_acc = find_accuracy(synsets, annotated_syns)
+    print("Single Accuracy: " + str(single_acc))
+    print("Pair Accuracy: " + str(pair_acc))
 
 
 start()

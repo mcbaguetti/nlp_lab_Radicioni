@@ -1,48 +1,50 @@
 bn:00066516n	bn:00037570n	recessione	PIL	condizione macroeconomica,fattori produttivi,crescita economica	pil, P.I.L.,prodotto interno lordo
 bn:00014550n	bn:00014550n	Cesare	Giulio Cesare	Gaio Giulio Cesare,Caio Giulio Cesare,imperatore	Gaio Giulio Cesare,Caio Giulio Cesare,imperatore
-bn:00001742n	bn:03751534n	paziente	sessione	ammalato,assistito,cliente	fase,periodo,sessione
+bn:00061017n	bn:00076588n	paziente	sessione	ammalato,assistito,cliente	fase,periodo,sessione
 bn:00009659n	bn:00076843n	comportamentismo	terapia	behaviourismo,psicologia,comportamento	guarigione,malattie,metodi
-bn:00014550n	bn:02436267n	imperatore	costituzione	Gaio Giulio Cesare,Caio Giulio Cesare,imperatore	organizzazione,formazione,organizzativo
-bn:00053834n	bn:00305552n	matematico	spettacolo	persona,ricerche,sperimentazioni	rivista ,Teatro di rivista,spettacolo
-bn:17267027n	bn:00046705n	entropia	informazione	casualita,azzardo,grandezza	Conoscenza,studio,dati
+bn:00014550n	bn:00059480n	imperatore	costituzione	Gaio Giulio Cesare,Caio Giulio Cesare,imperatore	organizzazione,formazione,organizzativo
+bn:00053834n	bn:00067553n	matematico	spettacolo	persona,ricerche,sperimentazioni	rivista ,Teatro di rivista,spettacolo
+bn:00031061n	bn:00046705n	entropia	informazione	casualita,azzardo,grandezza	Conoscenza,studio,dati
 bn:00068288n	bn:00007010n	acqua di rose	olio di rosa	giulebbe,bevanda,estratto di rosa	petali,rosa,estratto
-bn:00019301n	bn:00041408n	agrume	pompelmo	frutti,piante,Rutaceae	Agrume,buccia gialla,amarognolo
-bn:00065652n	bn:00030861n	Regina Vittoria	Inghilterra	regina,Regno Unito,Imperatrice	Gran Bretagna,Regno Unito,Irlanda del Nord
-bn:00058913n	bn:00044468n	Giochi Olimpici	spirito	olimpiade,Olimpiadi ,Manifestazione	fantasma,spettro,apparizione
-bn:03012712n	bn:00047600n	vescovo	musulmano	responsabile,chiese,cattolicesimo	mussulmano,islamico,maomettano
-bn:00053097n	bn:00075447n	uomo	sospetto	essere umano,Homo,umano	convenuto,accusato ,imputato
-bn:00054598n	bn:00029424n	meteorite	Terra	meteorite,Oggetto,spazio	mondo ,globo,terrestre
+bn:00019301n	bn:00019313n	agrume	pompelmo	frutti,piante,Rutaceae	Agrume,buccia gialla,amarognolo
+bn:00065652n	bn:00013173n	Regina Vittoria	Inghilterra	regina,Regno Unito,Imperatrice	Gran Bretagna,Regno Unito,Irlanda del Nord
+bn:00058910n	bn:00040370n	Giochi Olimpici	spirito	olimpiade,Olimpiadi ,Manifestazione	fantasma,spettro,apparizione
+bn:27267995n	bn:00055975n	vescovo	musulmano	responsabile,chiese,cattolicesimo	mussulmano,islamico,maomettano
+bn:00044576n	bn:00025884n	uomo	sospetto	essere umano,Homo,umano	convenuto,accusato ,imputato
+bn:00054602n	bn:00029424n	meteorite	Terra	meteorite,Oggetto,spazio	mondo ,globo,terrestre
 bn:00075652n	bn:00075652n	simbolo	segno	segno,significato convenzionale,elemento	segno,significato convenzionale,elemento
-bn:02529040n	bn:02530635n	antropologia	New York	Scienza,uomo,entita biologica	Nuova York ,stato di New York,citta
-bn:01888833n	bn:00075813n	tramonto	tavolo	crepuscolo,notte,illuminazione	tavola,mobilio,piano
-bn:00077773n	bn:00077773n	cittadina	città	Insediamento umano,villaggio,borgo	citta,cittadina ,paese
-bn:00041211n	bn:00055131n	giacca	acqua minerale	cappotto,casacca,giacchetta	minerale,bottiglia,acqua sorgiva
-bn:00081220n	bn:00012321n	natura	flora	fenomeni,forze,cose	pianta,Plantae,vegetale
+bn:00004584n	bn:00041611n	antropologia	New York	Scienza,uomo,entita biologica	Nuova York ,stato di New York,citta
+bn:05692316n	bn:00075813n	tramonto	tavolo	crepuscolo,notte,illuminazione	tavola,mobilio,piano
+bn:00070724n	bn:00077773n	cittadina	città	Insediamento umano,villaggio,borgo	citta,cittadina ,paese
+bn:00047823n	bn:00055131n	giacca	acqua minerale	cappotto,casacca,giacchetta	minerale,bottiglia,acqua sorgiva
+bn:00057017n	bn:00035324n	natura	flora	fenomeni,forze,cose	pianta,Plantae,vegetale
 bn:00036826n	bn:00021344n	subroutine	compilatore	sottoprogramma,procedura,procedimento	Programma,linguaggio,istruzioni
-bn:03266645n	bn:00660953n	Hamadan	Roma	citta,Iran,Ecbatana	Citta Eterna,Comune di Roma,impero romano
+bn:03266645n	bn:00015556n	Hamadan	Roma	citta,Iran,Ecbatana	Citta Eterna,Comune di Roma,impero romano
 bn:00078920n	bn:00074479n	ombrello	stufa	parapioggia,paracqua,ombrellone	fornello,fuoco,apparecchio
-bn:00044654n	bn:00031654n	onore	stima	dignita,decoro,onore	valutazione,estimazione,perizia
-bn:00002823n	bn:00025772n	insegna	dignità	bandiera,segnalazioni,identificazione	decoro,onore,reputazione
+bn:00027103n	bn:00031973n	onore	stima	dignita,decoro,onore	valutazione,estimazione,perizia
+bn:00034960n	bn:00027103n	insegna	dignità	bandiera,segnalazioni,identificazione	decoro,onore,reputazione
+bn:00027675n	bn:01132021n	KFC	McDonald's	display,monitor,video	Monitor,schermo ,dispositivo
 bn:00022301n	bn:00054808n	joystick	radar	cloche,barra,comando	radiolocalizzatore,posizione,rilevamento
 bn:00567353n	bn:02666084n	basmati	riso jasmine	riso,grano,fragranza	riso,chicco lungo,fiori
-bn:00054078n	bn:00068586n	medaglia	scarpe da ginnastica	riconoscimento,Attestazione,distinzione	sneaker,takkies,attivita sportive
-bn:00064426n	bn:02332519n	legge	piscina	diritto,giurisprudenza,legislazione	vasca,piscina coperta,nuotare
-bn:00036077n	bn:00015103n	sorgente	scatola	fonte,polla,scaturigine	cassetta,astuccio,cassa
-bn:00034270n	bn:00021287n	teatro	batteria	Edificio,opere,spettacolo	tamburo,Membranofoni,membranofono
-bn:03260352n	bn:00013447n	flora	web browser	pianta,Plantae,vegetale	browser,navigatore,informatica
-bn:00028687n	bn:00015958n	camicia	cardigan	Indumento,cotone,maniche	golf,maglione,bottoni
-bn:00063193n	bn:00063201n	poema	ritmo	poesia,versi,narrativo	tempo,pause,intervalli
-bn:00064759n	bn:00057892n	profeta	prete	aedo,divinatore,vate	pastore,curato,Parroco
-bn:00407538n	bn:00061898n	Oscar	stadio	Premio Oscar,Academy Award, cinema	arena,campo sportivo,palazzetto dello sport
+bn:23946490n	bn:00042319n	medaglia	scarpe da ginnastica	riconoscimento,Attestazione,distinzione	sneaker,takkies,attivita sportive
+bn:00048655n	bn:00056911n	legge	piscina	diritto,giurisprudenza,legislazione	vasca,piscina coperta,nuotare
+bn:00036077n	bn:00012524n	sorgente	scatola	fonte,polla,scaturigine	cassetta,astuccio,cassa
+bn:00045002n	bn:00028891n	teatro	batteria	Edificio,opere,spettacolo	tamburo,Membranofoni,membranofono
+bn:00035324n	bn:00013447n	flora	web browser	pianta,Plantae,vegetale	browser,navigatore,informatica
+bn:00071142n	bn:00015958n	camicia	cardigan	Indumento,cotone,maniche	golf,maglione,bottoni
+bn:15205441n	bn:00009396n	poema	ritmo	poesia,versi,narrativo	tempo,pause,intervalli
+bn:00064759n	bn:00024459n	profeta	prete	aedo,divinatore,vate	pastore,curato,Parroco
+bn:00000571n	bn:00005532n	Oscar	stadio	Premio Oscar,Academy Award, cinema	arena,campo sportivo,palazzetto dello sport
 bn:00007779n	bn:00040833n	backgammon	Go	tavola reale,sbaraglino,tric-trac	gioco da tavolo,giocatori ,Cina
-bn:00012473n	bn:00062507n	farfalla	rosa	Insetto ,grandi ali ,Lepidotteri	rosaio,Fiore,pianta
-bn:00060140n	bn:00048558n	recinto	salto	recinzione,barriera,cinta	movimento,salto,abilita
-bn:00057710n	bn:00735555n	nichilismo	film	nihilismo,Dottrina filosofica ,societa	spettacolo ,pellicola,opera cinematografica
-bn:00055203n	bn:00073965n	asteroide	stella	planetoide,corpo celeste,pianeta terrestre	stella,sole,Corpo celeste
-bn:01480882n	bn:00028562n	sommossa	disegno	ribellione,rivolta,insurrezione	figura,illustrazione ,riproduzione
-bn:00021740n	bn:03119994n	intimo	corpo	biancheria intima,lingerie,indumento	organismo,tessuti,tessuti
-bn:01156257n	bn:00001697n	Boeing	aereo	aereo militare,mezzo militare,spazioplano	aeromobile,velivolo,aeroplano
-bn:03871797n	bn:00061560n	cameo	interpretazione	apparizione,personaggio famoso,spettacolo	performance,esecuzione,esibizione
-bn:00059249n	bn:00019301n	arancia	agrume	arancio ,albero,Rutaceae	Citrus,frutto,pianta
+bn:00014271n	bn:00068283n	farfalla	rosa	Insetto ,grandi ali ,Lepidotteri	rosaio,Fiore,pianta
+bn:00034048n	bn:00048558n	recinto	salto	recinzione,barriera,cinta	movimento,salto,abilita
+bn:00057710n	bn:00034471n	nichilismo	film	nihilismo,Dottrina filosofica ,societa	spettacolo ,pellicola,opera cinematografica
+bn:00006608n	bn:00073964n	asteroide	stella	planetoide,corpo celeste,pianeta terrestre	stella,sole,Corpo celeste
+bn:00047003n	bn:00028639n	sommossa	disegno	ribellione,rivolta,insurrezione	figura,illustrazione ,riproduzione
+bn:00079003n	bn:00011744n	intimo	corpo	biancheria intima,lingerie,indumento	organismo,tessuti,tessuti
+bn:01156257n	bn:00002275n	Boeing	aereo	aereo militare,mezzo militare,spazioplano	aeromobile,velivolo,aeroplano
+bn:02119437n	bn:00061560n	cameo	interpretazione	apparizione,personaggio famoso,spettacolo	performance,esecuzione,esibizione
+bn:00029424n	bn:00006329n	semestre	quadrimestre	terra,globo,globo terrestre	regione,supercontinente,continente
+bn:17389700n	bn:00019301n	arancia	agrume	arancio ,albero,Rutaceae	Citrus,frutto,pianta
 bn:00040579n	bn:00040681n	ghiacciaio	riscaldamento globale	ghiaccio,regioni montane,neve	clima,atmosfera,mutamento
-bn:14530939n	bn:00061006n	galleria	percorso	tunnel,Passaggio,cunicolo	strada,via,Striscia di terreno
+bn:00078606n	bn:00067975n	galleria	percorso	tunnel,Passaggio,cunicolo	strada,via,Striscia di terreno
