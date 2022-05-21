@@ -239,7 +239,7 @@ def get_words(summary_path):
 # evaluate the summary with two metrics: bleu and rouge
 def evalutation(freq_dict, summary_words, percentage):
 
-    word_to_eval = int(len(freq_dict) * percentage)
+    word_to_eval = int(len(freq_dict))
     summ_words = int(len(summary_words) * percentage)
     count = 0
 
@@ -283,7 +283,6 @@ def start(file_path, percentage, topic_method):
     summary_words = get_words(summary_path)
 
     bleu, rouge = evalutation(sorted_freq, summary_words, percentage)
-
     print("Bleu Precision: " + str(bleu))
     print("Rouge Recall: " + str(rouge))
 
