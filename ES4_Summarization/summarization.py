@@ -1,11 +1,43 @@
 import math
-
 from nltk.tokenize import sent_tokenize, word_tokenize
 import nltk
+import re
+
+
+# disambiguate vectors with the same word
+def disambiguate_vect(term, v1, v2, path):
+    s1, s2 = [], []
+    found = False
+
+    with open(path, encoding="utf8") as file:
+        for row in file:
+            if re.search(term, row):
+                found = True
+                break
+
+    if not found:
+        return v1
+    
+    term_def = nltk.wsd.lesk(row, term).definition()
+    clean_def = clean_row(str(term_def))
+    for c1, c2 in zip(v1, v2):
+        s1.append(str(c1[0]))
+        s2.append(str(c2[0]))
+
+    set1 = set(s1)
+    set2 = set(s2)
+
+    i1 = set1.intersection(clean_def)
+    i2 = set2.intersection(clean_def)
+
+    if len(i1) >= len(i2):
+        return v1
+    else:
+        return v2
 
 
 # create a dictionary with pairs word: nasari vector
-def create_nasari():
+def create_nasari(txt_path):
     nasari = {}
     nasari_path = "NASARI_vectors/dd-small-nasari-15.txt"
 
@@ -25,7 +57,13 @@ def create_nasari():
                 if len(splitted) == 2:
                     vector.append((splitted[0].lower(), float(splitted[1])))
 
-            nasari[term] = vector
+            if nasari.get(term, 0) != 0:
+                dis_vector = disambiguate_vect(term, nasari[term], vector, txt_path)
+                if dis_vector:
+                    nasari[term] = dis_vector
+            else:
+                nasari[term] = vector
+
         return nasari
 
 
@@ -261,7 +299,7 @@ def start(file_path, percentage, topic_method):
     topic_vect = []
     saved_paragraph = []
 
-    nasari_dict = create_nasari()
+    nasari_dict = create_nasari(file_path)
     lines = calc_rows_to_read(file_path, percentage)
 
     if topic_method == "title":
