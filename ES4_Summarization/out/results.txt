@@ -1,0 +1,83 @@
+ANDY WARHOL
+
+out/summary_0.7_title_Andy-Warhol.txt
+Bleu Precision: 0.7798165137614679
+Rouge Recall: 0.7249466950959488
+
+out/summary_0.8_title_Andy-Warhol.txt
+Bleu Precision: 0.7708333333333334
+Rouge Recall: 0.7889125799573561
+
+out/summary_0.9_title_Andy-Warhol.txt
+Bleu Precision: 0.7531531531531531
+Rouge Recall: 0.8912579957356077
+
+out/summary_0.7_cue_Andy-Warhol.txt
+Bleu Precision: 0.7553648068669528
+Rouge Recall: 0.7505330490405118
+
+out/summary_0.8_cue_Andy-Warhol.txt
+Bleu Precision: 0.7504835589941973
+Rouge Recall: 0.8272921108742004
+
+out/summary_0.9_cue_Andy-Warhol.txt
+Bleu Precision: 0.7539823008849558
+Rouge Recall: 0.908315565031983
+
+
+
+
+LIFE INDOORS
+
+out/summary_0.7_title_Life-indoors.txt
+Bleu Precision: 0.7935779816513762
+Rouge Recall: 0.7863636363636364
+
+out/summary_0.8_title_Life-indoors.txt
+Bleu Precision: 0.774074074074074
+Rouge Recall: 0.95
+
+out/summary_0.9_title_Life-indoors.txt
+Bleu Precision: 0.7695035460992907
+Rouge Recall: 0.9863636363636363
+
+out/summary_0.7_cue_Life-indoors.txt
+Bleu Precision: 0.7867298578199052
+Rouge Recall: 0.7545454545454545
+
+out/summary_0.8_cue_Life-indoors.txt
+Bleu Precision: 0.7830882352941176
+Rouge Recall: 0.9681818181818181
+
+out/summary_0.9_cue_Life-indoors.txt
+Bleu Precision: 0.7695035460992907
+Rouge Recall: 0.9863636363636363
+
+
+
+
+TRUMP WALL
+
+out/summary_0.7_title_Trump-wall.txt
+Bleu Precision: 0.4747742963356346
+Rouge Recall: 0.9480381760339343
+
+out/summary_0.8_title_Trump-wall.txt
+Bleu Precision: 0.4643564356435644
+Rouge Recall: 0.9946977730646872
+
+out/summary_0.9_title_Trump-wall.txt
+Bleu Precision: 0.4637752587481518
+Rouge Recall: 0.9978791092258749
+
+out/summary_0.7_cue_Trump-wall.txt
+Bleu Precision: 0.5189873417721519
+Rouge Recall: 0.782608695652174
+
+out/summary_0.8_cue_Trump-wall.txt
+Bleu Precision: 0.4912174439733495
+Rouge Recall: 0.8600212089077413
+
+out/summary_0.9_cue_Trump-wall.txt
+Bleu Precision: 0.474854420328216
+Rouge Recall: 0.9512195121951219
