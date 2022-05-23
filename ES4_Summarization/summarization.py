@@ -329,8 +329,6 @@ def start(file_path, percentage, topic_method):
     return
 
 
-
-
 start("docs/Life-indoors.txt", 0.7, "title")
 start("docs/Life-indoors.txt", 0.8, "title")
 start("docs/Life-indoors.txt", 0.9, "title")

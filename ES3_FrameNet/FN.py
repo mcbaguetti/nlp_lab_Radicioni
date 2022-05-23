@@ -196,21 +196,46 @@ def get_manual_annotation(annotation_path):
 # start the execution
 def start():
     annotation_path = "gold_annotation.txt"
-
+    out_path = "out/res.txt"
     f_name, f_def = get_frames_dict()
     words, syns = disambiguate(f_name, f_def)
     annotations = get_manual_annotation(annotation_path)
 
     count = 0
-    for s, a in zip(syns, annotations):
-        sy = s.name()
-        ann = str(a).split()[1]
+    with open(out_path, encoding="utf-8", mode='w') as new_file:
 
-        if sy == ann:
-            count += 1
+        correct_name = {"Proliferating": "proliferating",
+                        "Try_defendant": "defendant",
+                        "Political_locales": "politician",
+                        "Sent_items": "sent",
+                        "Causation": "causation",
+                        "Emotion_heat": "emotion",
+                        "Losing": "losing",
+                        "Deny_or_grant_permission": "permission",
+                        "Going_back_on_a_commitment": "commitment",
+                        "Referring_by_name": "referring"
+                        }
 
-    accuracy = count / len(syns)
-    print(accuracy)
+        for s, a in zip(syns, annotations):
+            row = ""
+            sy = s.name()
+            word = str(a).split()[0]
+            ann = str(a).split()[1]
+
+            if sy == ann:
+                count += 1
+
+            if word[0].isupper():
+                row += "\n" + "The word " + word + "was mapped with " + correct_name[word] + "\n"
+
+            row += word + " " + ann + " " + sy + "\n"
+            new_file.write(row)
+
+        accuracy = count / len(syns)
+        row = "\nThe overall accuracy is: "
+        row += str(accuracy)
+        new_file.write(row)
+        print(accuracy)
 
 
 start()
