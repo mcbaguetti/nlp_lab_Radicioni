@@ -17,8 +17,10 @@ def disambiguate_vect(term, v1, v2, path):
 
     if not found:
         return v1
-    
-    term_def = nltk.wsd.lesk(row, term).definition()
+
+    term_def = nltk.wsd.lesk(row, term)
+    if term_def:
+        term_def = term_def.definition()
     clean_def = clean_row(str(term_def))
     for c1, c2 in zip(v1, v2):
         s1.append(str(c1[0]))
@@ -275,10 +277,10 @@ def get_words(summary_path):
 
 
 # evaluate the summary with two metrics: bleu and rouge
-def evalutation(freq_dict, summary_words, percentage):
+def evalutation(freq_dict, summary_words):
 
     word_to_eval = int(len(freq_dict))
-    summ_words = int(len(summary_words) * percentage)
+    summ_words = int(len(summary_words))
     count = 0
 
     for i, elem in enumerate(freq_dict):
@@ -320,11 +322,16 @@ def start(file_path, percentage, topic_method):
     sorted_freq = sort(freq_dict)
     summary_words = get_words(summary_path)
 
-    bleu, rouge = evalutation(sorted_freq, summary_words, percentage)
+    bleu, rouge = evalutation(sorted_freq, summary_words)
     print("Bleu Precision: " + str(bleu))
     print("Rouge Recall: " + str(rouge))
 
     return
 
 
-start("docs/Andy-Warhol.txt", 0.9, "cue")
+start("docs/Life-indoors.txt", 0.7, "title")
+start("docs/Life-indoors.txt", 0.8, "title")
+start("docs/Life-indoors.txt", 0.9, "title")
+start("docs/Life-indoors.txt", 0.7, "cue")
+start("docs/Life-indoors.txt", 0.8, "cue")
+start("docs/Life-indoors.txt", 0.9, "cue")

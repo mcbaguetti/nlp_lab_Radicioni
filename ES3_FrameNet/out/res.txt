@@ -1,0 +1,216 @@
+
+The word Proliferatingwas mapped with proliferating
+Proliferating proliferate.v.01 proliferate.v.01
+attribute attribute.n.01 impute.v.01
+set set.n.02 set.n.01
+difference difference.n.02 remainder.n.03
+path path.n.02 path.n.02
+speed speed.n.01 speed.n.01
+manner manner.n.01 manner.n.01
+degree degree.n.01 degree.n.01
+circumstances circumstance.n.01 fortune.n.04
+group group.n.02 group.n.01
+time clock.v.02 clock.v.01
+duration duration.n.01 duration.n.02
+place put.v.01 put.v.01
+proliferate.v proliferate.v.01 proliferate.v.02
+multiply.v multiply.v.02 multiply.v.02
+dwindle.v dwindle.v.01 dwindle.v.01
+proliferation.n proliferation.n.01 proliferation.n.02
+non-proliferation.n nonproliferation.n.01 nonproliferation.n.01
+
+The word Try_defendantwas mapped with defendant
+Try_defendant defendant.n.01 defendant.n.01
+judge judge.n.01 judge.n.01
+court court.n.01 court.n.01
+defendant defendant.n.01 defendant.n.01
+jury jury.n.01 jury.n.01
+time time.n.01 time.n.01
+place place.n.01 topographic_point.n.01
+charges charge.n.01 charge.n.02
+manner manner.n.01 manner.n.01
+try.v judge.v.05 judge.v.05
+
+The word Political_localeswas mapped with politician
+Political_locales politician.n.01 politician.n.01
+locale venue.n.02 venue.n.01
+name name.n.01 name.n.01
+descriptor form.n.01 form.n.01
+population population.n.01 population.n.01
+barony.n baronetcy.n.02 baronetcy.n.01
+territory.n district.n.01 district.n.01
+country.n country.n.01 country.n.02
+province.n province.n.01 state.n.01
+duchy.n duchy.n.02 duchy.n.01
+viscountcy.n viscountcy.n.02 viscountcy.n.01
+county.n county.n.02 county.n.01
+principality.n principality.n.02 principality.n.01
+borough.n borough.n.01 borough.n.02
+town.n town.n.01 town.n.01
+realm.n kingdom.n.02 kingdom.n.01
+kingdom.n kingdom.n.02 kingdom.n.03
+municipality.n municipality.n.01 municipality.n.01
+metropolis.n city.n.03 city.n.01
+megalopolis.n city.n.03 megalopolis.n.01
+city.n city.n.01 city.n.02
+world.n world.n.06 world.n.06
+federal.a federal.a.04 federal.a.04
+parish.n parish.n.01 parish.n.01
+diocese.n diocese.n.01 diocese.n.01
+international.a international.a.02 international.a.01
+local.a local.a.01 local.a.01
+locality.n vicinity.n.01 vicinity.n.01
+municipal.a municipal.a.01 municipal.a.01
+national.a national.a.01 national.a.01
+empire.n empire.n.01 conglomerate.n.02
+village.n village.n.01 village.n.01
+nation.n state.n.01 state.n.04
+commonwealth.n state.n.01 state.n.04
+city-state.n city_state.n.01 city_state.n.01
+district.n district.n.01 district.n.01
+fiefdom.n fiefdom.n.01 fiefdom.n.01
+jurisdiction.n jurisdiction.n.01 jurisdiction.n.02
+land.n domain.n.01 domain.n.02
+provincial.a provincial.a.01 provincial.a.01
+territorial.a territorial.a.01 territorial.a.01
+township.n township.n.01 township.n.01
+
+The word Sent_itemswas mapped with sent
+Sent_items send.v.01 send.v.02
+sender sender.n.02 sender.n.01
+goal goal.n.01 goal.n.01
+source beginning.n.03 beginning.n.04
+recipient recipient.n.01 recipient.n.01
+time time.n.01 time.n.01
+place topographic_point.n.02 topographic_point.n.01
+descriptor form.n.01 form.n.01
+mail.n mail.n.04 mail.n.01
+post.n mail.n.01 mail.n.04
+shipment.n cargo.n.01 cargo.n.01
+
+The word Causationwas mapped with causation
+Causation causing.n.01 causing.n.01
+cause cause.v.01 cause.n.01
+affected affect.v.01 affect.v.01
+effect consequence.n.01 consequence.n.01
+place topographic_point.n.01 topographic_point.n.01
+time time.n.02 time.n.04
+actor actor.n.02 actor.n.02
+circumstances circumstance.n.01 circumstance.n.01
+manner manner.n.01 manner.n.01
+explanation explanation.n.01 explanation.n.01
+means entail.v.02 entail.v.01
+frequency frequency.n.01 frequency.n.01
+concessive concessive.a.01 concessive.a.01
+cause.v cause.v.01 cause.v.01
+cause.n causal_agent.n.01 causal_agent.n.01
+make.v make.v.02 make.v.03
+reason.n reason.n.02 reason.n.01
+send.v send.v.01 send.v.01
+precipitate.v precipitate.v.02 precipitate.v.01
+causative.a causative.a.01 causative.a.01
+render.v render.v.02 render.v.01
+bring.v bring.v.02 bring.v.02
+induce.v induce.v.03 induce.v.05
+wreak.v bring.v.03 bring.v.03
+put.v put.v.01 put.v.01
+raise.v raise.v.02 raise.v.02
+mean.v entail.v.01 entail.v.01
+result.n result.n.03 result.n.03
+leave.v leave.v.01 leave.v.01
+see.v watch.v.02 watch.v.03
+force.v coerce.v.01 coerce.v.01
+responsible.a responsible.a.01 responsible.a.01
+consequence.n consequence.n.01 consequence.n.01
+dictate.v order.v.02 order.v.03
+motivate.v motivate.v.02 motivate.v.01
+sway.v sway.v.02 rock.v.02
+legacy.n bequest.n.01 bequest.n.01
+
+The word Emotion_heatwas mapped with emotion
+Emotion_heat emotion.n.01 emotion.n.01
+emotion emotion.n.01 emotion.n.01
+cause cause.n.01 cause.n.01
+degree degree.n.02 degree.n.01
+manner manner.n.02 manner.n.01
+topic topic.n.01 topic.n.02
+expression expression.n.01 expression.n.02
+boil.v boil.v.02 boil.v.01
+burn.v burn.v.01 burn.v.01
+chafe.v chafe.v.01 chafe.v.01
+fume.v fume.v.01 fume.v.01
+seethe.v hum.v.02 hum.v.02
+simmer.v simmer.v.01 simmer.v.01
+smoulder.v smolder.v.02 smolder.v.02
+stew.v smolder.v.01 grizzle.v.01
+
+The word Losingwas mapped with losing
+Losing lose.v.01 lose.v.01
+owner owner.n.01 owner.n.01
+possession possession.n.01 possession.n.01
+time time.n.02 time.n.02
+place topographic_point.n.01 topographic_point.n.01
+means means.n.01 means.n.01
+explanation explanation.n.01 explanation.n.01
+lose.v lose.v.01 lose.v.01
+misplace.v misplace.v.01 misplace.v.02
+
+The word Deny_or_grant_permissionwas mapped with permission
+Deny_or_grant_permission permission.n.01 permission.n.01
+authority authority.n.01 authority.n.01
+protagonist protagonist.n.01 protagonist.n.02
+action action.n.02 action.n.01
+time time.n.04 time.n.02
+place topographic_point.n.01 topographic_point.n.01
+purpose purpose.n.02 purpose.n.01
+degree degree.n.01 degree.n.01
+explanation explanation.n.02 explanation.n.01
+circumstances circumstance.n.02 circumstance.n.01
+frequency frequency.n.01 frequency.n.01
+depictive delineative.s.02 delineative.s.01
+manner manner.n.01 manner.n.01
+means intend.v.01 intend.v.01
+forbid.v forbid.v.01 forbid.v.01
+prohibit.v forbid.v.01 forbid.v.01
+outlaw.v outlaw.v.01 outlaw.v.01
+disallow.v forbid.v.02 forbid.v.01
+approval.n approval.n.01 blessing.n.01
+approve.v approve.v.01 approve.v.01
+authorize.v authorize.v.01 authorize.v.01
+clear.v authorize.v.01 authorize.v.01
+leave.n leave.n.01 leave.n.02
+mandate.n mandate.n.01 mandate.n.01
+okay.v approve.v.02 approve.v.01
+permission.n permission.n.01 permission.n.01
+permit.v permit.v.01 permit.v.01
+restrict.v restrict.v.01 restrict.v.01
+suffer.v suffer.v.01 digest.v.03
+prohibition.n prohibition.n.01 prohibition.n.01
+
+The word Going_back_on_a_commitmentwas mapped with commitment
+Going_back_on_a_commitment commitment.n.04 commitment.n.04
+protagonist protagonist.n.01 supporter.n.01
+commitment committedness.n.03 committedness.n.01
+manner manner.n.02 manner.n.01
+time time.n.02 time.n.03
+place topographic_point.n.01 topographic_point.n.01
+explanation explanation.n.01 explanation.n.01
+degree degree.n.01 degree.n.01
+iterations iteration.n.01 iteration.n.02
+result result.n.02 result.n.03
+renege.v renege.v.01 renege.v.01
+
+The word Referring_by_namewas mapped with referring
+Referring_by_name refer.v.01 mention.v.01
+speaker speaker.n.01 speaker.n.01
+entity entity.n.01 entity.n.01
+name name.n.01 name.n.01
+time time.n.01 time.n.03
+descriptor form.n.01 form.n.01
+address.v address.v.02 address.v.01
+call.v call.v.01 name.v.01
+refer.v refer.v.01 denote.v.02
+name.n name.n.01 name.n.01
+designation.n designation.n.01 appellation.n.01
+
+The overall accuracy is: 0.5876288659793815
